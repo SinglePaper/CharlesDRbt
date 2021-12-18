@@ -34,7 +34,6 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 ```
 
 ## Requirements (Windows)
-- conda
 - Python 3
 - cv2>=4.5.4-dev
 - tensorflow==2.5.0
