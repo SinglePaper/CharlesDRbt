@@ -22,7 +22,8 @@ If any are unavailable, try to find an identical alternative.
 All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/thing:5167214). All of the files' names are prefixed with the material it should be printed with and, if applicable, the amount required.
 
 ## Schematic
-![schematic](https://user-images.githubusercontent.com/27017516/146649519-a799b9a6-c05c-4683-b22b-800f84550f2a.png)
+![schematic](https://user-images.githubusercontent.com/27017516/146649582-84fa802a-a21b-4eb1-aa96-c11541feb33e.png)
+
 
 ## Requirements (Raspberry Pi)
 - 
