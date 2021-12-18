@@ -5,11 +5,12 @@ Charles D. Robot can detect objects and center them in the frame. This guide can
 ### Electronics
 The following electronics are required for the build:
 - [Raspberry Pi Zero WH](https://www.kiwi-electronics.nl/nl/raspberry-pi-zero-wh-header-voorgesoldeerd-3328?search=raspberry%20pi%20zero&page=2)
+- [Raspberry Pi Zero camera](https://nl.aliexpress.com/item/32788881215.html?spm=a2g0s.9042311.0.0.27424c4dMKKQ5k)
 - [Dual H-Bridge DC stepper motor driver - L298N](https://www.kiwi-electronics.nl/nl/dual-h-bridge-dc-stepper-motor-driver-l298n-4117?search=h-bridge)
 - 2x [DC Gearbox Motor](https://www.kiwi-electronics.nl/nl/dc-gearbox-motor-tt-motor-200rpm-3-6vdc-10318?search=motor)
 - [Set of jumperwires F/F](https://www.kiwi-electronics.nl/nl/jumperwires-10-stuks-f-f-15cm-362)
 - [Set of jumperwires F/M](https://www.kiwi-electronics.nl/nl/jumperwires-10-stuks-m-f-15cm-311?search=jumper%20cable)
-- [Switch (10x15mm)]
+- [Switch (10x15mm)](https://nl.aliexpress.com/item/1005001513148147.html?spm=a2g0s.9042311.0.0.27424c4dBuHDV5)
 - 4x M2.5\*15mm screws
 - 4x M3\*15mm screws
 - 4x M3\*25mm screws
@@ -20,23 +21,36 @@ If any are unavailable, try to find an identical alternative.
 ### 3D-printed parts
 All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/thing:5167214). All of the files' names are prefixed with the material it should be printed with and, if applicable, the amount required.
 
-## Requirements
+## Schematic
+![schematic](https://user-images.githubusercontent.com/27017516/146649582-84fa802a-a21b-4eb1-aa96-c11541feb33e.png)
+
+
+## Requirements (Raspberry Pi)
 - 
 
-## Setup
+## Setup (Raspberry Pi)
 ```bash
-git clone --recurse-submodules git@git.liacs.nl:s2619369/ea-a2.git
-cd ea-a2
-git submodule update --init --recursive
-cd IOHexperimenter
-mkdir build
-mkdir INSTALL
-cd build
-cmake .. && sudo make install
-mkdir ../external/fmt/build
-cd ../external/fmt/build
-cmake .. && sudo make install
+
 ```
 
+## Requirements (Windows)
+- Python 3
+- opencv-python>=4.5.4-dev
+- tensorflow==2.5.0
+- [object_detection](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#install-the-object-detection-api)
+
+## Setup (Windows)
+```bash
+# From within 'Tensorflow' directory 
+mkdir workspace
+cd workspace
+git clone --recurse-submodules https://github.com/SinglePaper/CharlesDRbt.git
+cd CharlesDRbt
+```
+Turn on your Raspberry Pi and wait for it to start up, then run:
+```bash
+ping raspberrypi.local
+```
+If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi's ip in ```./detect.py``` and ```./images/collected_images/collect.py```
 ## Usage
 - 
