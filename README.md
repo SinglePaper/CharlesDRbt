@@ -44,4 +44,7 @@ cmake .. && sudo make install
 ```
 
 ## Usage
-- 
+- cv2>=4.5.4-dev
+- tensorflow==2.5.0
+- [object_detection](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#install-the-object-detection-api)
+- numpy>=1.19.5
