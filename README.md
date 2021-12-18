@@ -10,6 +10,9 @@ The following electronics are required for the build. If any are unavailable, tr
 All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/thing:5167214). All of the files' names are prefixed with the material it should be printed with and, if applicable, the amount required.
 
 ## Requirements
+- 
+
+## Setup
 ```bash
 git clone --recurse-submodules git@git.liacs.nl:s2619369/ea-a2.git
 cd ea-a2
@@ -24,8 +27,5 @@ cd ../external/fmt/build
 cmake .. && sudo make install
 ```
 
-## Setup
-- 
-
 ## Usage
-
+- 
