@@ -8,6 +8,7 @@ cv2.namedWindow("Press space to capture...")
 img_label = "robot_"  # Sets the prefix of the image when saved. Helps to organise images, especially when training for several objects.
 
 while True:
+    # Show new frame and act upon key presses
     ret, frame = cam.read()
     if not ret:
         print("failed to grab frame")
