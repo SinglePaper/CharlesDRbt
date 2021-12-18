@@ -1,11 +1,11 @@
 import cv2
 from datetime import datetime
 
-cam = cv2.VideoCapture("http://raspberrypi.local:8080/stream/video.mjpeg")   # Change to own camera (url, ip, or int)
+PI_IP = "raspberrypi.local"  # Fill in the IP to your Raspberry Pi
+img_label = "robot_"  # Sets the prefix of the image when saved. Helps to organise images, especially when training for several objects.
+cam = cv2.VideoCapture("http://"+PI_IP+":8080/stream/video.mjpeg")   # (If not following guide: Change to own camera (url, ip, or int))
 
 cv2.namedWindow("Press space to capture...")
-
-img_label = "robot_"  # Sets the prefix of the image when saved. Helps to organise images, especially when training for several objects.
 
 while True:
     # Show new frame and act upon key presses
