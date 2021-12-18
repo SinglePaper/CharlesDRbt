@@ -9,7 +9,7 @@ The following electronics are required for the build:
 - 2x [DC Gearbox Motor](https://www.kiwi-electronics.nl/nl/dc-gearbox-motor-tt-motor-200rpm-3-6vdc-10318?search=motor)
 - [Set of jumperwires F/F](https://www.kiwi-electronics.nl/nl/jumperwires-10-stuks-f-f-15cm-362)
 - [Set of jumperwires F/M](https://www.kiwi-electronics.nl/nl/jumperwires-10-stuks-m-f-15cm-311?search=jumper%20cable)
-- [Switch (10x15mm)]
+- [Switch (10x15mm)](https://nl.aliexpress.com/item/1005001513148147.html?spm=a2g0s.9042311.0.0.27424c4dBuHDV5)
 - 4x M2.5\*15mm screws
 - 4x M3\*15mm screws
 - 4x M3\*25mm screws
