@@ -47,6 +47,10 @@ mkdir workspace
 cd workspace
 git clone --recurse-submodules https://github.com/SinglePaper/CharlesDRbt.git
 cd CharlesDRbt
+mkdir data
+cd data
+mkdir models
+cd ..
 ```
 Turn on your Raspberry Pi and wait for it to start up, then run:
 ```bash
@@ -62,3 +66,5 @@ If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi'
 - From ```Tensorflow/workspace/CharlesDRbt``` run ```train.bat```
   - Keep running until total_loss decreases slowly or flatlines. 
     - If this happens before ~0.2, the model will likely be very inaccurate. Consider increasing the size of your database and creating more variation in the environment the images are taken in.
+  - Optional: To view training process in graph format, open a second command prompt and from the same directory run ```eval.bat```
+- From the same directory, run ```export.bat``` and give it a name.
