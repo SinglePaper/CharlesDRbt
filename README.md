@@ -41,7 +41,7 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 
 ## Setup (Windows)
 ```bash
-git clone --recurse-submodules git@github.com:SinglePaper/CharlesDRbt.git
+git clone --recurse-submodules https://github.com/SinglePaper/CharlesDRbt.git
 ```
 
 ## Usage
