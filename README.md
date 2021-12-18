@@ -5,6 +5,7 @@ Charles D. Robot can detect objects and center them in the frame. This guide can
 ### Electronics
 The following electronics are required for the build:
 - [Raspberry Pi Zero WH](https://www.kiwi-electronics.nl/nl/raspberry-pi-zero-wh-header-voorgesoldeerd-3328?search=raspberry%20pi%20zero&page=2)
+- [Raspberry Pi Zero camera](https://nl.aliexpress.com/item/32788881215.html?spm=a2g0s.9042311.0.0.27424c4dMKKQ5k)
 - [Dual H-Bridge DC stepper motor driver - L298N](https://www.kiwi-electronics.nl/nl/dual-h-bridge-dc-stepper-motor-driver-l298n-4117?search=h-bridge)
 - 2x [DC Gearbox Motor](https://www.kiwi-electronics.nl/nl/dc-gearbox-motor-tt-motor-200rpm-3-6vdc-10318?search=motor)
 - [Set of jumperwires F/F](https://www.kiwi-electronics.nl/nl/jumperwires-10-stuks-f-f-15cm-362)
@@ -20,8 +21,12 @@ If any are unavailable, try to find an identical alternative.
 ### 3D-printed parts
 All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/thing:5167214). All of the files' names are prefixed with the material it should be printed with and, if applicable, the amount required.
 
-## Requirements
+## Requirements (Raspberry Pi)
 - 
+
+## Requirements (Windows)
+- 
+
 
 ## Setup
 ```bash
