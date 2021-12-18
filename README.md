@@ -37,6 +37,7 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 - Python 3
 - opencv-python>=4.5.4-dev
 - tensorflow==2.5.0
+- labelImg
 - [object_detection](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#install-the-object-detection-api)
 
 ## Setup (Windows)
@@ -51,6 +52,10 @@ Turn on your Raspberry Pi and wait for it to start up, then run:
 ```bash
 ping raspberrypi.local
 ```
-If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi's ip in ```./detect.py``` and ```./images/collected_images/collect.py```
+If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi's ip in ```/detect.py``` and ```/images/collected_images/collect.py```
 ## Usage
-- 
+- Edit ```/annotations/label_map.pbtxt``` to match your object(s)
+- Run ```/images/collected_images/collect.py``` and press space to capture images (esc to exit)
+- From ```/images/collected_images```run ```labelImg ./```
+- For each image, press 'w', draw a square around the object and name it according to its name in ```/annotations/label_map.pbtxt```
+- Divide the gathered images and .xml files over ```/images/train``` and ```/images/test``` in ratio 9:1 respectively
