@@ -59,5 +59,5 @@ If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi'
 - From ```/images/collected_images```run ```labelImg ./```.
 - For each image, press 'w', draw a square around the object and name it according to its name in ```/annotations/label_map.pbtxt```.
 - Divide the gathered images and .xml files over ```/images/train``` and ```/images/test``` in ratio 9:1 respectively. Both should always have images.
-- From ```Tensorflow/workspace/CharlesDRbt``` run ```train.bat``` (Optionally, open a new tab )
-  - test
+- From ```Tensorflow/workspace/CharlesDRbt``` run ```train.bat```
+  - Keep running until total_loss decreases slowly or flatlines. If this happens before ~0.2
