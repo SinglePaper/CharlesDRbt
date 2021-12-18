@@ -52,10 +52,12 @@ Turn on your Raspberry Pi and wait for it to start up, then run:
 ```bash
 ping raspberrypi.local
 ```
-If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi's ip in ```/detect.py``` and ```/images/collected_images/collect.py```
-## Usage
-- Edit ```/annotations/label_map.pbtxt``` to match your object(s)
-- Run ```/images/collected_images/collect.py``` and press space to capture images (esc to exit)
-- From ```/images/collected_images```run ```labelImg ./```
-- For each image, press 'w', draw a square around the object and name it according to its name in ```/annotations/label_map.pbtxt```
-- Divide the gathered images and .xml files over ```/images/train``` and ```/images/test``` in ratio 9:1 respectively
+If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi's ip in ```/detect.py``` and ```/images/collected_images/collect.py```.
+## Usage (Training)
+- Edit ```/annotations/label_map.pbtxt``` to match your object(s).
+- Run ```/images/collected_images/collect.py``` and press space to capture images (esc to exit). Start with at least 25, preferably more, and vary background of image.
+- From ```/images/collected_images```run ```labelImg ./```.
+- For each image, press 'w', draw a square around the object and name it according to its name in ```/annotations/label_map.pbtxt```.
+- Divide the gathered images and .xml files over ```/images/train``` and ```/images/test``` in ratio 9:1 respectively. Both should always have images.
+- From ```Tensorflow/workspace/CharlesDRbt``` run ```train.bat``` (Optionally, open a new tab )
+  - test
