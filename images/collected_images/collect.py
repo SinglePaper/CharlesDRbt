@@ -1,7 +1,7 @@
 import cv2
 from datetime import datetime
 
-cam = cv2.VideoCapture("http://charlie.local:8080/stream/video.mjpeg")   # Change to own camera (url, ip, or int)
+cam = cv2.VideoCapture("http://raspberrypi.local:8080/stream/video.mjpeg")   # Change to own camera (url, ip, or int)
 
 cv2.namedWindow("Press space to capture...")
 

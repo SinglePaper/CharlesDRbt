@@ -1,1 +1,1 @@
-conda activate tensorflow && tensorboard --logdir=models/ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8
+tensorboard --logdir=models/ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8
