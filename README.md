@@ -51,6 +51,6 @@ Turn on your Raspberry Pi and wait for it to start up
 ```bash
 ping raspberrypi.local
 ```
-
+If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi's ip in ```./detect.py``` and ```./images/collected_images/collect.py```
 ## Usage
 - 
