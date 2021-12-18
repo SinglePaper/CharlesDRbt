@@ -37,6 +37,7 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 - Python 3
 - opencv-python>=4.5.4-dev
 - tensorflow==2.5.0
+- labelImg
 - [object_detection](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#install-the-object-detection-api)
 
 ## Setup (Windows)
@@ -46,11 +47,25 @@ mkdir workspace
 cd workspace
 git clone --recurse-submodules https://github.com/SinglePaper/CharlesDRbt.git
 cd CharlesDRbt
+mkdir data
+cd data
+mkdir models
+cd ..
 ```
 Turn on your Raspberry Pi and wait for it to start up, then run:
 ```bash
 ping raspberrypi.local
 ```
-If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi's ip in ```./detect.py``` and ```./images/collected_images/collect.py```
-## Usage
-- 
+If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi's ip in ```/detect.py``` and ```/images/collected_images/collect.py```.
+## Usage (Training)
+- Edit ```/annotations/label_map.pbtxt``` to match your object(s).
+- Run ```/images/collected_images/collect.py``` and press space to capture images (esc to exit). Start with at least 25, preferably more, and vary background of image.
+- From ```/images/collected_images```run ```labelImg ./```.
+- For each image, press 'w', draw a square around the object and name it according to its name in ```/annotations/label_map.pbtxt```.
+- Divide the gathered images and .xml files over ```/images/train``` and ```/images/test``` in ratio 9:1 respectively. Both should always have images.
+- If you are training for more than one object, change 
+- From ```Tensorflow/workspace/CharlesDRbt``` run ```train.bat```
+  - Keep running until total_loss decreases slowly or flatlines. 
+    - If this happens before ~0.2, the model will likely be very inaccurate. Consider increasing the size of your database and creating more variation in the environment the images are taken in.
+  - Optional: To view training process in graph format, open a second command prompt and from the same directory run ```eval.bat```
+- From the same directory, run ```export.bat``` and give it a name.
