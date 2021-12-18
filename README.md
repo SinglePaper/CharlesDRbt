@@ -25,8 +25,11 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 - 
 
 ## Requirements (Windows)
-- 
-
+- Python 3
+- cv2>=4.5.4-dev
+- tensorflow==2.5.0
+- [object_detection](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#install-the-object-detection-api)
+- numpy>=1.19.5
 
 ## Setup
 ```bash
@@ -44,7 +47,4 @@ cmake .. && sudo make install
 ```
 
 ## Usage
-- cv2>=4.5.4-dev
-- tensorflow==2.5.0
-- [object_detection](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#install-the-object-detection-api)
-- numpy>=1.19.5
+- 
