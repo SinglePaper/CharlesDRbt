@@ -42,6 +42,8 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 ## Setup (Windows)
 ```bash
 # From within 'Tensorflow' directory 
+mkdir workspace
+cd workspace
 git clone --recurse-submodules https://github.com/SinglePaper/CharlesDRbt.git
 ```
 
