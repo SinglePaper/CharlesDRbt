@@ -1,0 +1,1 @@
+conda activate tensorflow && python model_main_tf2.py --model_dir=models/ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8 --pipeline_config_path=models/ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8/pipeline.config
