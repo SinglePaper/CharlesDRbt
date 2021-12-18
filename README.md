@@ -47,6 +47,10 @@ cd workspace
 git clone --recurse-submodules https://github.com/SinglePaper/CharlesDRbt.git
 cd CharlesDRbt
 ```
+Turn on your Raspberry Pi and wait for it to start up
+```bash
+ping raspberrypi.local
+```
 
 ## Usage
 - 
