@@ -24,6 +24,21 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 ## Requirements (Raspberry Pi)
 - 
 
+## Setup (Raspberry Pi)
+```bash
+git clone --recurse-submodules git@git.liacs.nl:s2619369/ea-a2.git
+cd ea-a2
+git submodule update --init --recursive
+cd IOHexperimenter
+mkdir build
+mkdir INSTALL
+cd build
+cmake .. && sudo make install
+mkdir ../external/fmt/build
+cd ../external/fmt/build
+cmake .. && sudo make install
+```
+
 ## Requirements (Windows)
 - Python 3
 - cv2>=4.5.4-dev
@@ -31,7 +46,7 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 - [object_detection](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#install-the-object-detection-api)
 - numpy>=1.19.5
 
-## Setup
+## Setup (Windows)
 ```bash
 git clone --recurse-submodules git@git.liacs.nl:s2619369/ea-a2.git
 cd ea-a2
