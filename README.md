@@ -66,15 +66,15 @@ If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi'
 - From ```/images/collected_images```run ```labelImg ./```.
 - For each image, press 'w', draw a square around the object and name it according to its name in ```/annotations/label_map.pbtxt```.
 - Divide the gathered images and .xml files over ```/images/train``` and ```/images/test``` in ratio 9:1 respectively. Both should always have images.
-- From ```Tensorflow/workspace/CharlesDRbt``` run ```train.bat```
+- From ```Tensorflow/workspace/CharlesDRbt``` run ```train.bat```.
   - Keep running until total_loss decreases slowly or flatlines. 
     - If this happens before ~0.2, the model will likely be very inaccurate. Consider increasing the size of your database and creating more variation in the environment the images are taken in.
-  - Optional: To view training process in graph format, open a second command prompt and from the same directory run ```eval.bat```
+  - Optional: To view training process in graph format, open a second command prompt and from the same directory run ```eval.bat```.
 - From the same directory, run ```export.bat``` and give it a name.
-- Move the directory with that in ```/exported-models``` to ```/data/models```
-- Copy ```/annotations/label_map.pbtxt``` to the model's directory in ```/data/models```
+- Move the directory with that in ```/exported-models``` to ```/data/models```.
+- Copy ```/annotations/label_map.pbtxt``` to the model's directory in ```/data/models```.
 
 ## Usage (Detection)
-- Turn on the Raspberry Pi
-- Edit lines 3, 4 and 5 in ```/detect.py``` to your liking
-- From ```Tensorflow/CharlesDRbt/``` run ```python detect.py```
+- Turn on the Raspberry Pi.
+- Edit lines 3, 4 and 5 in ```/detect.py``` to your liking.
+- From ```Tensorflow/CharlesDRbt/``` run ```python detect.py```.
