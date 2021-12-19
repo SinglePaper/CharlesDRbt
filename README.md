@@ -27,10 +27,12 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 
 
 ## Requirements (Raspberry Pi)
-- 
+- Raspbian Buster
 
 ## Setup (Raspberry Pi)
 ```bash
+git clone --recurse-submodules https://github.com/SinglePaper/CharlesDRbt-RPi.git
+cd CharlesDRbt-RPi
 sudo apt update
 sudo apt install uv4l uv4l-raspicam uv4l-raspicam-extras
 sudo apt install uv4l-webrtc
