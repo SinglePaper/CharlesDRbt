@@ -6,6 +6,7 @@ Charles D. Robot can detect objects and center them in the frame. This guide can
 The following electronics are required for the build:
 - [Raspberry Pi Zero WH](https://www.kiwi-electronics.nl/nl/raspberry-pi-zero-wh-header-voorgesoldeerd-3328?search=raspberry%20pi%20zero&page=2)
 - [Raspberry Pi Zero camera](https://nl.aliexpress.com/item/32788881215.html?spm=a2g0s.9042311.0.0.27424c4dMKKQ5k)
+- Micro SD card (min. 16GB, 32GB recommended)
 - [Dual H-Bridge DC stepper motor driver - L298N](https://www.kiwi-electronics.nl/nl/dual-h-bridge-dc-stepper-motor-driver-l298n-4117?search=h-bridge)
 - 2x [DC Gearbox Motor](https://www.kiwi-electronics.nl/nl/dc-gearbox-motor-tt-motor-200rpm-3-6vdc-10318?search=motor)
 - [Set of jumperwires F/F](https://www.kiwi-electronics.nl/nl/jumperwires-10-stuks-f-f-15cm-362)
@@ -70,3 +71,10 @@ If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi'
     - If this happens before ~0.2, the model will likely be very inaccurate. Consider increasing the size of your database and creating more variation in the environment the images are taken in.
   - Optional: To view training process in graph format, open a second command prompt and from the same directory run ```eval.bat```
 - From the same directory, run ```export.bat``` and give it a name.
+- Move the directory with that in ```/exported-models``` to ```/data/models```
+- Copy ```/annotations/label_map.pbtxt``` to the model's directory in ```/data/models```
+
+## Usage (Detection)
+- Turn on the Raspberry Pi
+- Edit lines 3, 4 and 5 in ```/detect.py``` to your liking
+- From ```Tensorflow/CharlesDRbt/``` run ```python detect.py```
