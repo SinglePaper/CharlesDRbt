@@ -31,8 +31,19 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 
 ## Setup (Raspberry Pi)
 ```bash
-
+sudo apt update
+sudo apt install uv4l uv4l-raspicam uv4l-raspicam-extras
+sudo apt install uv4l-webrtc
 ```
+- Go to ```[raspberrypi ip]:8080/panel``` and change the following settings:
+  - width: 800
+  - height: 600
+  - format: MJPEG Video (streamable)
+  - frame rate: 10
+  - Optional: change mirror or rotate settings if necessary  
+
+## Usage (Raspberry Pi)
+
 
 ## Requirements (Windows)
 - Python 3.7.9
