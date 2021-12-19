@@ -78,4 +78,5 @@ If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi'
 - Turn on the Raspberry Pi
 - Edit lines 3, 4 and 5 in ```/detect.py``` to your liking
 - From ```Tensorflow/CharlesDRbt/``` run ```bash
-python detect.py```
+python detect.py
+```
