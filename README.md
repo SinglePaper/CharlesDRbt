@@ -31,6 +31,9 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 - flask
 
 ## Setup (Raspberry Pi)
+```sh
+sudo nano update.sh
+```
 ```bash
 git clone --recurse-submodules https://github.com/SinglePaper/CharlesDRbt-RPi.git
 cd CharlesDRbt-RPi
