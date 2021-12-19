@@ -41,6 +41,7 @@ sudo apt install uv4l-webrtc
   - format: MJPEG Video (streamable)
   - frame rate: 10
   - Optional: change mirror or rotate settings if necessary  
+  - Click 'Apply'
 
 ## Usage (Raspberry Pi)
 
