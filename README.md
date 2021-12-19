@@ -31,17 +31,17 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 - flask
 
 ## Setup (Raspberry Pi)
-```sh
-sudo nano update.sh
-```
 ```bash
 git clone --recurse-submodules https://github.com/SinglePaper/CharlesDRbt-RPi.git
-cd CharlesDRbt-RPi
+sudo nano /etc/rc.local
+```
+- At the bottom of the file, before ```exit 0```, add ```sudo python3 /home/pi/CharlesDRbt-RPi/receivey.py```
+```bash
 sudo apt update
 sudo apt install uv4l uv4l-raspicam uv4l-raspicam-extras
 sudo apt install uv4l-webrtc
 ```
-- Go to ```[raspberrypi ip]:8080/panel``` and change the following settings:
+- Go to ```[raspberrypi-ip]:8080/panel``` and change the following settings:
   - width: 800
   - height: 600
   - format: MJPEG Video (streamable)
@@ -50,7 +50,7 @@ sudo apt install uv4l-webrtc
   - Click 'Apply'
 
 ## Usage (Raspberry Pi)
-
+- If you go to ```[raspberrypi-ip]``` now, you should see the camera feed and the controls. The controls should be able to control the motors now.
 
 ## Requirements (Windows)
 - Python 3.7.9
