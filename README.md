@@ -60,7 +60,7 @@ ping raspberrypi.local
 If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi's ip in ```/detect.py``` and ```/images/collected_images/collect.py```.
 ## Usage (Training)
 - Edit ```/annotations/label_map.pbtxt``` to match your object(s).
-- If you are training for more than one object, change ```num_classes``` in ```models/ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8/pipeline.config``` to your amount of objects.
+- If training for more than one object, change ```num_classes``` in ```models/ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8/pipeline.config``` to your amount of objects.
 - Run ```/images/collected_images/collect.py``` and press space to capture images (esc to exit). Start with at least 25, preferably more, and vary background of image.
 - From ```/images/collected_images```run ```labelImg ./```.
 - For each image, press 'w', draw a square around the object and name it according to its name in ```/annotations/label_map.pbtxt```.
