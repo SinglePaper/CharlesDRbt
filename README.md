@@ -6,6 +6,7 @@ Charles D. Robot can detect objects and center them in the frame. This guide can
 The following electronics are required for the build:
 - [Raspberry Pi Zero WH](https://www.kiwi-electronics.nl/nl/raspberry-pi-zero-wh-header-voorgesoldeerd-3328?search=raspberry%20pi%20zero&page=2)
 - [Raspberry Pi Zero camera](https://nl.aliexpress.com/item/32788881215.html?spm=a2g0s.9042311.0.0.27424c4dMKKQ5k)
+- Micro SD card (min. 16GB, 32GB recommended)
 - [Dual H-Bridge DC stepper motor driver - L298N](https://www.kiwi-electronics.nl/nl/dual-h-bridge-dc-stepper-motor-driver-l298n-4117?search=h-bridge)
 - 2x [DC Gearbox Motor](https://www.kiwi-electronics.nl/nl/dc-gearbox-motor-tt-motor-200rpm-3-6vdc-10318?search=motor)
 - [Set of jumperwires F/F](https://www.kiwi-electronics.nl/nl/jumperwires-10-stuks-f-f-15cm-362)
@@ -34,10 +35,11 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 ```
 
 ## Requirements (Windows)
-- Python 3
+- Python 3.7.9
 - opencv-python>=4.5.4-dev
 - tensorflow==2.5.0
 - labelImg
+- pandas
 - [object_detection](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#install-the-object-detection-api)
 
 ## Setup (Windows)
@@ -59,13 +61,20 @@ ping raspberrypi.local
 If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi's ip in ```/detect.py``` and ```/images/collected_images/collect.py```.
 ## Usage (Training)
 - Edit ```/annotations/label_map.pbtxt``` to match your object(s).
+- When training for more than one object, change ```num_classes``` in ```models/ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8/pipeline.config``` to your amount of objects.
 - Run ```/images/collected_images/collect.py``` and press space to capture images (esc to exit). Start with at least 25, preferably more, and vary background of image.
 - From ```/images/collected_images```run ```labelImg ./```.
 - For each image, press 'w', draw a square around the object and name it according to its name in ```/annotations/label_map.pbtxt```.
 - Divide the gathered images and .xml files over ```/images/train``` and ```/images/test``` in ratio 9:1 respectively. Both should always have images.
-- If you are training for more than one object, change 
-- From ```Tensorflow/workspace/CharlesDRbt``` run ```train.bat```
+- From ```Tensorflow/workspace/CharlesDRbt``` run ```train.bat```.
   - Keep running until total_loss decreases slowly or flatlines. 
     - If this happens before ~0.2, the model will likely be very inaccurate. Consider increasing the size of your database and creating more variation in the environment the images are taken in.
-  - Optional: To view training process in graph format, open a second command prompt and from the same directory run ```eval.bat```
+  - Optional: To view training process in graph format, open a second command prompt and from the same directory run ```eval.bat```.
 - From the same directory, run ```export.bat``` and give it a name.
+- Move the directory with that in ```/exported-models``` to ```/data/models```.
+- Copy ```/annotations/label_map.pbtxt``` to the model's directory in ```/data/models```.
+
+## Usage (Detection)
+- Turn on the Raspberry Pi.
+- Edit lines 3, 4 and 5 in ```/detect.py``` to your liking.
+- From ```Tensorflow/CharlesDRbt/``` run ```python detect.py```.
