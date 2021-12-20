@@ -84,7 +84,7 @@ If host could not be found, change ```raspberrypi.local``` to your Raspberry Pi'
 - Run ```/images/collected_images/collect.py``` and press space to capture images (esc to exit). Start with at least 25, preferably more, and vary background of image.
 - From ```/images/collected_images``` run ```labelImg ./```.
 - For each image, press 'w', draw a square around the object and name it according to its name in ```/annotations/label_map.pbtxt```.
-- Divide the gathered images and .xml files over ```/images/train``` and ```/images/test``` in ratio 9:1 respectively. Both should always have images.
+- Divide the gathered images and matching .xml files over ```/images/train``` and ```/images/test``` in ratio 9:1 respectively. Both directories should always contain data. Never seperate images from their matching .xml files.
 - From ```Tensorflow/workspace/CharlesDRbt``` run ```train.bat```.
   - Keep running until total_loss decreases slowly or flatlines. 
     - If this happens before ~0.2, the model will likely be very inaccurate. Consider increasing the size of your database and creating more variation in the environment the images are taken in.
