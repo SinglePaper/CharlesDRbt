@@ -53,8 +53,8 @@ sudo apt install uv4l-webrtc
 - If you go to ```[raspberrypi-ip]``` now, you should see the camera feed and the controls. The controls should be able to control the motors now.
 
 ## Requirements (Windows)
-- Git for Windows
-- Python 3.7.9 64bit
+- [Git for Windows](https://gitforwindows.org/)
+- [Python 3.7.9 64bit](https://www.python.org/downloads/release/python-379/)
   - [opencv-python>=4.5.4-dev](https://pypi.org/project/opencv-python/)
   - [tensorflow==2.5.0](https://pypi.org/project/tensorflow/2.5.0/)
   - [labelImg](https://pypi.org/project/labelImg/)
