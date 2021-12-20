@@ -54,7 +54,7 @@ sudo apt install uv4l-webrtc
 
 ## Requirements (Windows)
 - [Git for Windows](https://gitforwindows.org/)
-- [Python 3.7.9 64bit](https://www.python.org/downloads/release/python-379/)
+- [Python 3.7.9 64bit](https://www.python.org/downloads/release/python-379/) (added to path)
   - [opencv-python>=4.5.4-dev](https://pypi.org/project/opencv-python/)
   - [tensorflow==2.5.0](https://pypi.org/project/tensorflow/2.5.0/)
   - [labelImg](https://pypi.org/project/labelImg/)
