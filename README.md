@@ -27,8 +27,8 @@ All 3D-printed parts can be found on [Thingiverse](https://www.thingiverse.com/t
 
 
 ## Requirements (Raspberry Pi)
-- Raspbian Buster
-- flask
+- [Raspbian Buster](https://www.raspberrypi.com/software/operating-systems/)
+- [flask](https://pypi.org/project/Flask/)
 
 ## Setup (Raspberry Pi)
 ```bash
