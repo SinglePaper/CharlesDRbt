@@ -59,7 +59,7 @@ sudo apt install uv4l-webrtc
   - [tensorflow==2.5.0](https://pypi.org/project/tensorflow/2.5.0/)
   - [labelImg](https://pypi.org/project/labelImg/)
   - [pandas](https://pypi.org/project/pandas/)
-  - [object_detection](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#install-the-object-detection-api)
+  - [object_detection](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#tensorflow-object-detection-api-installation)
 
 ## Setup (Windows)
 ```bash
